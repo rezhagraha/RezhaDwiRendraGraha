@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_app"
+            app:startDestination="@id/mainActivity">
+
+    <activity android:id="@+id/mainActivity" android:name="com.tugastengahsemester.rezhagraha.MainActivity"
+              android:label="activity_main" tools:layout="@layout/activity_main"/>
+    <fragment android:id="@+id/fragmentActivity"
+              android:name="com.tugastengahsemester.rezhagraha.FragmentActivity"
+              android:label="fragment_activity" tools:layout="@layout/fragment_activity">
+        <action
+                android:id="@+id/action_fragmentActivity_to_mieAyam"
+                app:destination="@id/mieAyam" />
+        <action
+                android:id="@+id/action_fragmentActivity_to_nasiGoreng"
+                app:destination="@id/nasiGoreng" />
+        <action
+                android:id="@+id/action_fragmentActivity_to_sateAyam"
+                app:destination="@id/sateAyam" />
+        <action
+                android:id="@+id/action_fragmentActivity_to_bakso23"
+                app:destination="@id/bakso2" />
+    </fragment>
+    <fragment
+            android:id="@+id/bakso2"
+            android:name="com.tugastengahsemester.rezhagraha.Bakso"
+            android:label="fragment_bakso"
+            tools:layout="@layout/fragment_bakso" >
+        <action
+                android:id="@+id/action_bakso2_to_fragmentActivity"
+                app:destination="@id/fragmentActivity" />
+    </fragment>
+    <fragment
+            android:id="@+id/mieAyam"
+            android:name="com.tugastengahsemester.rezhagraha.MieAyam"
+            android:label="fragment_mie_ayam"
+            tools:layout="@layout/fragment_mie_ayam" >
+        <action
+                android:id="@+id/action_mieAyam_to_fragmentActivity"
+                app:destination="@id/fragmentActivity" />
+    </fragment>
+    <fragment
+            android:id="@+id/nasiGoreng"
+            android:name="com.tugastengahsemester.rezhagraha.NasiGoreng"
+            android:label="fragment_nasi_goreng"
+            tools:layout="@layout/fragment_nasi_goreng" >
+        <action
+                android:id="@+id/action_nasiGoreng_to_fragmentActivity"
+                app:destination="@id/fragmentActivity" />
+    </fragment>
+    <fragment
+            android:id="@+id/sateAyam"
+            android:name="com.tugastengahsemester.rezhagraha.SateAyam"
+            android:label="fragment_sate_ayam"
+            tools:layout="@layout/fragment_sate_ayam" >
+        <action
+                android:id="@+id/action_sateAyam_to_fragmentActivity"
+                app:destination="@id/fragmentActivity" />
+    </fragment>
+</navigation>
