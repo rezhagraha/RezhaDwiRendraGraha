@@ -5,7 +5,11 @@
             app:startDestination="@id/mainActivity">
 
     <activity android:id="@+id/mainActivity" android:name="com.tugastengahsemester.rezhagraha.MainActivity"
-              android:label="activity_main" tools:layout="@layout/activity_main"/>
+              android:label="activity_main" tools:layout="@layout/activity_main">
+        <action
+                android:id="@+id/action_mainActivity_to_fragmentActivity"
+                app:destination="@id/fragmentActivity" />
+    </activity>
     <fragment android:id="@+id/fragmentActivity"
               android:name="com.tugastengahsemester.rezhagraha.FragmentActivity"
               android:label="fragment_activity" tools:layout="@layout/fragment_activity">
